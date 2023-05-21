@@ -13,11 +13,12 @@ export default defineConfig({
   //Add base route if deployiing on production
   base: env.mode === "production" ? "/examen-parcial-firebase-rentas-wilmer/" : "/",
   build: {
+    target: "esnext",
     outDir: "docs",
     assetsDir: "assets",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
+        main: resolve(__dirname, 'index.html')
          
       }
     }
